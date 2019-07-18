@@ -7,7 +7,18 @@ import VerticalLine from './components/svg_vertical'
 import './styles/style.css'
 
 class Combine extends React.Component{
+    constructor(props){
+        super(props)
+        this.onSignIn=this.onSignIn.bind(this)
+    }
 
+   onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      } 
   
   render(){
       return(
@@ -23,8 +34,10 @@ class Combine extends React.Component{
                     </div>
                     <Button value='Login' class='btn btn-outline-dark mx-4'/>
                 </div>
-               
                </div> 
+               <div className='row p-3'>
+                  <div className="g-signin2 col-3 mx-3" data-onsuccess="this.onSignIn()"></div>
+                </div>
           </div>
       );
   }
