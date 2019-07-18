@@ -1,0 +1,30 @@
+@media(max-width:768px){
+    .col-0{
+       display: none;
+       width: 0 !important;
+    }
+}
+.window{
+    min-height: 40vh;
+    min-width: 80vw;
+    background-color: white;
+    box-shadow: 5px 5px 4px black;
+}
+label{
+    font-size: 0.6em;
+    margin-bottom: 0 !important;
+    color:grey;
+    font-weight: lighter;
+}
+#chart line{ 
+    stroke: #555555; 
+    stroke-width:1
+}
+#l1,#l2{
+    font-size: 1.2em;
+    color:  #330033;
+}
+#l2{
+    font-size: 1.5em;
+    color:black !important;
+}
