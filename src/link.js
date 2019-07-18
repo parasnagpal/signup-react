@@ -1,8 +1,10 @@
 import React from 'react';
+import GoogleLogin from 'react-google-login';
 
 import Button from './components/button'
 import SignUpForm from './components/form'
 import VerticalLine from './components/svg_vertical'
+
 
 import './styles/style.css'
 
@@ -39,9 +41,12 @@ class Combine extends React.Component{
                     <Button value='Login' class='btn btn-outline-dark mx-4'/>
                 </div>
                </div> 
-               <div className='row p-3'>
-                  <div className="g-signin2 col-3 mx-3" data-onsuccess="this.onSignIn"></div>
-                </div>
+               <GoogleLogin
+                 clientId="915008140428-515ntt9gsotv0sd5qphtp3eak6cmka3l.apps.googleusercontent.com"
+                 buttonText="Login"
+                 onSuccess={this.onSignIn}
+                 cookiePolicy={'single_host_origin'}
+               />
           </div>
       );
   }

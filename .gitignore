@@ -4,12 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+yarn.lock
 
 # credentials
 src/credentials.json
 
 # testing
 /coverage
+
 
 # production
 /build
