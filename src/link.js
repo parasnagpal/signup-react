@@ -13,6 +13,7 @@ class Combine extends React.Component{
     }
 
    onSignIn(googleUser) {
+       console.log('csdc')
         var profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
@@ -20,6 +21,9 @@ class Combine extends React.Component{
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
       } 
   
+  componentDidMount(){
+      alert('mounted')
+  }    
   render(){
       return(
           <div className='conatiner-fluid window'>
@@ -36,7 +40,7 @@ class Combine extends React.Component{
                 </div>
                </div> 
                <div className='row p-3'>
-                  <div className="g-signin2 col-3 mx-3" data-onsuccess="this.onSignIn()"></div>
+                  <div className="g-signin2 col-3 mx-3" data-onsuccess="this.onSignIn"></div>
                 </div>
           </div>
       );
