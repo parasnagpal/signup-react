@@ -3,7 +3,7 @@ import '../assets/css/bootstrap.min.css'
 
 const button=(props)=>{
     return(
-        <button className={props.class+'btn btn-outline-dark'}>
+        <button className={props.class}>
             {props.value}
         </button>
     );

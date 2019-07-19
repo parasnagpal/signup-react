@@ -5,7 +5,7 @@
     }
 }
 .window{
-    min-height: 40vh;
+    min-height: 65vh;
     min-width: 80vw;
     background-color: white;
     box-shadow: 5px 5px 4px black;
@@ -13,12 +13,12 @@
 label{
     font-size: 0.6em;
     margin-bottom: 0 !important;
-    color:grey;
-    font-weight: lighter;
+    color:#330033;
+    font-weight: bold;
 }
-#chart line{ 
-    stroke: #555555; 
-    stroke-width:1
+line{ 
+    stroke: #949494; 
+    stroke-width:0.5
 }
 #l1,#l2{
     font-size: 1.2em;
@@ -27,4 +27,11 @@ label{
 #l2{
     font-size: 1.5em;
     color:black !important;
+}
+.pr-0{
+    padding-right: 0% !important;
+}
+span.line{
+    color: #949494;
+    font-size: 0.4em;
 }
